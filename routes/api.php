@@ -66,3 +66,37 @@ Route::post('categories', function(Request $request) {
 
     return response()->json($category);
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*Route::get('/notes', 'NoteController@index')->name('note-list');
+
+Route::post('/notes', 'NoteController@create')->name('note-create');
+
+Route::patch('/notes/{id}/edit', 'NoteController@edit')->name('note-edit');
+
+Route::delete('/notes/{id}/delete', 'NoteController@delete')->name('note-delete');
+
+Route::post('categories', 'CategoryController@create')->name('category-create');*/
