@@ -20,7 +20,10 @@ class NoteExistsMiddleware
 
             return $next($request);
         } catch (\Exception $e) {
-            return response()->json('Model not found', 404);
+            return response()->json([
+                'code' => 404,
+                'message' => 'Model not found',
+            ], 404);
         }
     }
 }
