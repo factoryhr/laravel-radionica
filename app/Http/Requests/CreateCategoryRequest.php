@@ -26,7 +26,7 @@ class CreateCategoryRequest extends FormRequest
     public function rules()
     {
         return [
-            'title' => 'required|string|max:25',
+            'title' => ['required', 'string', 'max:25', new \App\Rules\TitleRule],
         ];
     }
 

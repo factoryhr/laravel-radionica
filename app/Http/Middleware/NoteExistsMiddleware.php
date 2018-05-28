@@ -16,7 +16,7 @@ class NoteExistsMiddleware
     public function handle($request, Closure $next)
     {
         try {
-            $note = $this->note->findOrFail($id);
+            $note = \App\Models\Note::findOrFail($request->route('note'));
 
             return $next($request);
         } catch (\Exception $e) {

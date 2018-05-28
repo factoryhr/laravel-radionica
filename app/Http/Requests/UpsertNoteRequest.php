@@ -28,7 +28,7 @@ class UpsertNoteRequest extends FormRequest
         return [
             'title' => 'required|string|max:25',
             'content' => 'required|string|max:100',
-            'category_id' => 'nullable|exists:categories.id',
+            'category_id' => 'nullable|exists:mysql.categories,id',
         ];
     }
 
